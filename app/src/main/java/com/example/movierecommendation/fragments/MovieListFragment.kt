@@ -21,6 +21,7 @@ class MovieListFragment:Fragment(R.layout.fragment_movie_list) {
         movieAdapter = MovieListAdapter()
         movie_list_rv.layoutManager = LinearLayoutManager(requireContext(),LinearLayoutManager.VERTICAL,false)
         movie_list_rv.adapter = movieAdapter
+
         movieAdapter?.submitList(createDummyData())
         movieAdapter?.notifyDataSetChanged()
     }
